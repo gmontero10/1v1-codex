@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tap Clash Duo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="arena" id="arena">
+      <header class="hud">
+        <div class="player-hud">
+          <div class="name">Player 1</div>
+          <div class="hearts" id="p1-hearts"></div>
+        </div>
+        <div class="round" id="round">Round 1</div>
+        <div class="player-hud">
+          <div class="name">Player 2</div>
+          <div class="hearts" id="p2-hearts"></div>
+        </div>
+      </header>
+
+      <section class="lane" id="lane-left" data-player="1">
+        <div class="lane-content">
+          <div class="charge-label">Charge</div>
+          <div class="charge-bar">
+            <div class="charge-fill" id="p1-charge"></div>
+          </div>
+          <div class="action" id="p1-action">Tap to Charge</div>
+          <button class="boost" id="p1-boost" aria-label="Power boost">⚡ Boost</button>
+        </div>
+      </section>
+
+      <section class="lane" id="lane-right" data-player="2">
+        <div class="lane-content">
+          <div class="charge-label">Charge</div>
+          <div class="charge-bar">
+            <div class="charge-fill" id="p2-charge"></div>
+          </div>
+          <div class="action" id="p2-action">Tap to Charge</div>
+          <button class="boost" id="p2-boost" aria-label="Power boost">⚡ Boost</button>
+        </div>
+      </section>
+
+      <div class="center-banner" id="center-banner">
+        <h1>Tap Clash Duo</h1>
+        <p>Tap your side to build charge. Reach 100 to fire a blast!</p>
+        <button id="start-btn">Start Match</button>
+      </div>
+
+      <div class="blast" id="blast"></div>
+    </main>
+
+    <footer class="controls">
+      <button id="reset-btn">New Match</button>
+      <button id="how-btn">How to Play</button>
+    </footer>
+
+    <div class="overlay" id="overlay">
+      <div class="card">
+        <h2>How to Play</h2>
+        <ol>
+          <li>Each player taps their half of the screen to charge up.</li>
+          <li>When your charge hits 100, you auto-fire a blast.</li>
+          <li>Blasts remove one heart. First to land 3 blasts wins!</li>
+          <li>Watch for ⚡ Boost buttons for bonus charge.</li>
+        </ol>
+        <button id="close-overlay">Let's Clash</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
